@@ -29,8 +29,6 @@ class Gamepad extends React.Component {
       }
     });
 
-    console.log(this.state);
-
     this.setState({
       ...this.state,
       allCards: allCards,
@@ -43,7 +41,7 @@ class Gamepad extends React.Component {
     console.log(this.state);
 
     const cardMapper = (x) => (
-      <div className="col-6">
+      <div className="col-4">
         <GameCard gameCard={x} />
       </div>
     );
@@ -62,7 +60,7 @@ class Gamepad extends React.Component {
     );
 
     return (
-      <div className="Gamepad container">
+      <div className="Gamepad container-fluid">
         <h1 className="GamepadHeader pb-5">GAMEBIT</h1>
         <h2 className="SectionHeader">Continue Playing</h2>
         <div className="row">

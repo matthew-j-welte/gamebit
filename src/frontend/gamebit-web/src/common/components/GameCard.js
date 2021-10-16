@@ -24,7 +24,7 @@ function GameCard({ gameCard }) {
       let innerHtml = null;
       if (side.name === "front") {
         innerHtml = (
-          <div className="p-4 text-center">
+          <div className="p-2 text-center">
             <h5 className="mt-1">{gameCard.name.toUpperCase()}</h5>
             <hr className="my-0"></hr>
             <img />
