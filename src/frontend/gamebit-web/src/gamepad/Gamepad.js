@@ -42,7 +42,11 @@ class Gamepad extends React.Component {
   render() {
     console.log(this.state);
 
-    const cardMapper = (x) => <GameCard gameCard={x} />;
+    const cardMapper = (x) => (
+      <div className="col-6">
+        <GameCard gameCard={x} />
+      </div>
+    );
     const noCardsToShowComponent = (
       <div className="NoCardsSlide">
         <h3>No Games to Show :(</h3>
@@ -61,15 +65,15 @@ class Gamepad extends React.Component {
       <div className="Gamepad container">
         <h1 className="GamepadHeader pb-5">GAMEBIT</h1>
         <h2 className="SectionHeader">Continue Playing</h2>
-        <div className="d-flex">
+        <div className="row">
           {continuePlayingCards ?? noCardsToShowComponent}
         </div>
         <h2 className="SectionHeader">New & Popular Games</h2>
-        <div className="d-flex">
+        <div className="row">
           {newAndPopularCards ?? noCardsToShowComponent}
         </div>
         <h2 className="SectionHeader">Browse All Games</h2>
-        <div className="d-flex">{allCards ?? noCardsToShowComponent}</div>
+        <div className="row">{allCards ?? noCardsToShowComponent}</div>
       </div>
     );
   }
