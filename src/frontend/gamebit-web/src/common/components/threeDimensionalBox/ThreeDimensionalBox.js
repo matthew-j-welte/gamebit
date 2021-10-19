@@ -21,18 +21,6 @@ function ThreeDimensionalBox({ box, navRules, tiltedRight, tiltedLeft }) {
     .map((side) => (
       <div key={side.name + "-face"} className={"BoxFace " + side.className}>
         {box[side.name]}
-        <div className="TopArrow">
-          <i className="fas fa-chevron-up"></i>
-        </div>
-        <div className="LeftArrow">
-          <i className="fas fa-chevron-left"></i>
-        </div>
-        <div className="RightArrow">
-          <i className="fas fa-chevron-right"></i>
-        </div>
-        <div className="BottomArrow">
-          <i className="fas fa-chevron-down"></i>
-        </div>
       </div>
     ));
 
