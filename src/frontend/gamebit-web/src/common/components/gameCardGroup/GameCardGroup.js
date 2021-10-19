@@ -3,7 +3,7 @@ import "./GameCard.scss";
 
 const boxSideNames = ["front", "right", "back", "left", "top", "bottom"];
 
-function GameCard({ gameCard }) {
+function GameCardGroup({ gameCards }) {
   const [activeSide, setActiveSide] = useState("front");
   const [isZoomed, setIsZoomed] = useState(false);
 

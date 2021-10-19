@@ -1,7 +1,7 @@
 import React from "react";
 import "./Gamepad.scss";
 import GameService from "../common/services/GameService";
-import GameCard from "../common/components/GameCard";
+import GameCard from "../common/components/gameCard/GameCard";
 
 class Gamepad extends React.Component {
   constructor(props) {
@@ -38,11 +38,9 @@ class Gamepad extends React.Component {
   }
 
   render() {
-    console.log(this.state);
-
-    const cardMapper = (x) => (
+    const cardMapper = (x, index) => (
       <div className="col-4">
-        <GameCard gameCard={x} />
+        <GameCard gameCard={x} index={index} />
       </div>
     );
     const noCardsToShowComponent = (
@@ -51,13 +49,20 @@ class Gamepad extends React.Component {
       </div>
     );
 
-    const allCards = this.state.allCards?.map((x) => cardMapper(x));
-    const continuePlayingCards = this.state.continuePlayingCards?.map((x) =>
-      cardMapper(x)
-    );
-    const newAndPopularCards = this.state.newAndPopularCards?.map((x) =>
-      cardMapper(x)
-    );
+    const allCards = [];
+    this.state.allCards?.forEach((x, index) => {
+      allCards.push(cardMapper(x, index));
+    });
+
+    const continuePlayingCards = [];
+    this.state.continuePlayingCards?.forEach((x, index) => {
+      continuePlayingCards.push(cardMapper(x, index));
+    });
+
+    const newAndPopularCards = [];
+    this.state.newAndPopularCards?.forEach((x, index) => {
+      newAndPopularCards.push(cardMapper(x, index));
+    });
 
     return (
       <div className="Gamepad container">

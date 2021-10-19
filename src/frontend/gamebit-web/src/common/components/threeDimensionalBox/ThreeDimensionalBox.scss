@@ -1,0 +1,201 @@
+.scene {
+  perspective: 500px;
+  width: 300px;
+  height: 200px;
+  margin: 80px;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.box.show-front {
+  transform: rotateY(0deg) rotateX(16deg);
+}
+
+.box.show-front-tiltedRight {
+  transform: rotateY(12deg) rotateX(16deg);
+}
+
+.box.show-front-tiltedLeft {
+  transform: rotateY(-12deg) rotateX(16deg);
+}
+
+.box.show-back {
+  transform: rotateY(-180deg);
+}
+
+.box.show-back-tiltedRight {
+  transform: rotateY(-180deg);
+}
+
+.box.show-back-tiltedLeft {
+  transform: rotateY(-180deg);
+}
+
+.box.show-right {
+  transform: rotateY(-90deg);
+}
+
+.box.show-right-tiltedRight {
+  transform: rotateY(-90deg);
+}
+
+.box.show-right-tiltedLeft {
+  transform: rotateY(-90deg);
+}
+
+.box.show-left {
+  transform: rotateY(90deg);
+}
+
+.box.show-left-tiltedRight {
+  transform: rotateY(90deg);
+}
+
+.box.show-left-tiltedLeft {
+  transform: rotateY(90deg);
+}
+
+.box.show-front:hover {
+  transform: translateZ(50px) rotateY(0deg) rotateX(16deg);
+}
+
+.box.show-front-tiltedLeft:hover {
+  transform: translateZ(50px) rotateY(0deg) rotateX(16deg);
+}
+
+.box.show-front-tiltedRight:hover {
+  transform: translateZ(50px) rotateY(0deg) rotateX(16deg);
+}
+
+.box.show-back:hover {
+  transform: rotateY(-180deg) rotateX(-16deg);
+}
+
+.box.show-back-tiltedLeft:hover {
+  transform: rotateY(-180deg) rotateX(-16deg);
+}
+
+.box.show-back-tiltedRight:hover {
+  transform: rotateY(-180deg) rotateX(-16deg);
+}
+
+.box.show-right:hover {
+  transform: rotateY(-90deg) rotateZ(-13deg);
+}
+
+.box.show-right-tiltedLeft:hover {
+  transform: rotateY(-90deg) rotateZ(-13deg);
+}
+
+.box.show-right-tiltedRight:hover {
+  transform: rotateY(-90deg) rotateZ(-13deg);
+}
+
+.box.show-left:hover {
+  transform: rotateY(90deg) rotateZ(13deg);
+}
+
+.box.show-left-tiltedLeft:hover {
+  transform: rotateY(90deg) rotateZ(13deg);
+}
+
+.box.show-left-tiltedRight:hover {
+  transform: rotateY(90deg) rotateZ(13deg);
+}
+
+.BoxFace {
+  border: solid 2px rgb(20, 20, 22);
+  border-radius: 2px;
+  position: absolute;
+  font-size: 40px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.BoxFaceFront,
+.BoxFaceBack {
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+  background-color: rgb(67, 116, 230);
+  background-image: radial-gradient(rgb(104, 147, 246), rgb(12, 57, 163) 120%);
+
+  // .TopArrow {
+  //   position: relative;
+  //   color: white;
+  //   top: 4px;
+  //   left: 146px;
+  // }
+
+  // .LeftArrow {
+  //   position: relative;
+  //   color: white;
+  //   top: 98px;
+  //   left: 2px;
+  // }
+
+  // .RightArrow {
+  //   position: relative;
+  //   color: white;
+  //   top: 98px;
+  //   left: 296px;
+  // }
+
+  // .BottomArrow {
+  //   position: relative;
+  //   color: white;
+  //   top: 196px;
+  //   left: 146px;
+  // }
+}
+
+.BoxFaceRight,
+.BoxFaceLeft {
+  width: 100px;
+  height: 200px;
+  left: 100px;
+  line-height: 200px;
+  background-color: rgb(67, 78, 230);
+  background-image: radial-gradient(rgb(109, 117, 236), rgb(65, 14, 158) 120%);
+}
+
+.BoxFaceTop,
+.BoxFaceBottom {
+  width: 300px;
+  height: 100px;
+  top: 50px;
+  line-height: 100px;
+  background-color: rgb(67, 78, 230);
+  background-image: radial-gradient(rgb(108, 116, 233), rgb(65, 14, 158) 120%);
+}
+
+.BoxFaceFront {
+  transform: rotateY(0deg) translateZ(50px);
+}
+.BoxFaceBack {
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.BoxFaceRight {
+  transform: rotateY(90deg) translateZ(150px);
+}
+.BoxFaceLeft {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+.BoxFaceTop {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.BoxFaceBottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+label {
+  margin-right: 10px;
+}
