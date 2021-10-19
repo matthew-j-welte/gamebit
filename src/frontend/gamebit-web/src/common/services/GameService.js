@@ -2,7 +2,7 @@ const GameService = {
   getGameCards: function () {
     return [
       {
-        name: "Fool's Gold",
+        name: "Sample Game 1",
         plays: 215,
         image: "XXXXXXXX",
         rating: 4.1,
@@ -12,7 +12,7 @@ const GameService = {
         playerRanking: 392,
       },
       {
-        name: "Easy as Pie",
+        name: "Sample Game 2",
         plays: 602,
         image: "XXXXXXXX",
         rating: 4.7,
@@ -22,7 +22,7 @@ const GameService = {
         playerRanking: null,
       },
       {
-        name: "Cry Wolf",
+        name: "Sample Game 3",
         plays: 107,
         image: "XXXXXXXX",
         rating: 4.3,
@@ -32,7 +32,7 @@ const GameService = {
         playerRanking: null,
       },
       {
-        name: "Needle in a Haystack",
+        name: "Sample Game 4",
         plays: 987,
         image: "XXXXXXXX",
         rating: 4.9,
@@ -42,7 +42,7 @@ const GameService = {
         playerRanking: 1596,
       },
       {
-        name: "Break the Ice",
+        name: "Sample Game 5",
         plays: 43,
         image: "XXXXXXXX",
         rating: 3.9,
@@ -52,7 +52,7 @@ const GameService = {
         playerRanking: null,
       },
       {
-        name: "Cat Nap",
+        name: "Sample Game 6",
         plays: 222,
         image: "XXXXXXXX",
         rating: 4.7,

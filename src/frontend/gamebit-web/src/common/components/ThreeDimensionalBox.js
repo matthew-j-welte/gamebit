@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./GameCard.scss";
+import "./ThreeDimensionalBox.scss";
 
 const boxSideNames = ["front", "right", "back", "left", "top", "bottom"];
 
-function GameCard({ gameCard }) {
+function ThreeDimensionalBox({ gameCard }) {
   const [activeSide, setActiveSide] = useState("front");
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -51,9 +51,14 @@ function GameCard({ gameCard }) {
     </label>
   ));
 
-  // https://uicookies.com/css-glow-effects/
-
-  return <div id="testbutton"></div>;
+  return (
+    <div>
+      <div className="scene">
+        <div className={"box " + "show-" + activeSide}>{boxFaceComponents}</div>
+      </div>
+      <p className="radio-group">{sideSelectionRadioBtns}</p>
+    </div>
+  );
 }
 
-export default GameCard;
+export default ThreeDimensionalBox;

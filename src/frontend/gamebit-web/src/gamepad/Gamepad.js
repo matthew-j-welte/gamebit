@@ -60,7 +60,7 @@ class Gamepad extends React.Component {
     );
 
     return (
-      <div className="Gamepad container-fluid">
+      <div className="Gamepad container">
         <h1 className="GamepadHeader pb-5">GAMEBIT</h1>
         <h2 className="SectionHeader">Continue Playing</h2>
         <div className="row">
