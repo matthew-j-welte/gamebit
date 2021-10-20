@@ -4,11 +4,11 @@ import "./ThreeDimensionalBox.scss";
 const boxSideNames = ["front", "right", "back", "left", "top", "bottom"];
 
 function ThreeDimensionalBox({ box, navRules, tiltedRight, tiltedLeft }) {
-  const [activeSide, setActiveSide] = useState("front");
+  const [activeSide] = useState("front");
 
-  function onSideSelected(e) {
-    setActiveSide(e.target.value);
-  }
+  // function onSideSelected(e) {
+  //   setActiveSide(e.target.value);
+  // }
 
   const boxFaceComponents = boxSideNames
     .map((side) => ({

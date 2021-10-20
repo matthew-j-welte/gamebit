@@ -39,7 +39,7 @@ class Gamepad extends React.Component {
 
   render() {
     const cardMapper = (x, index) => (
-      <div className="col-4">
+      <div key={index + "-game-card"} className="col-4">
         <GameCard gameCard={x} index={index} />
       </div>
     );

@@ -48,7 +48,7 @@ const GameService = {
         rating: 3.9,
         difficulty: 91,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 0,
+        playerCompletionPercentage: 3,
         playerRanking: null,
       },
       {

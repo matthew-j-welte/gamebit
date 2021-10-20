@@ -1,7 +1,6 @@
 import ThreeDimensionalBox from "../threeDimensionalBox/ThreeDimensionalBox";
 import defaultGamePicture from "../../../assets/sample-arcade-game.jpg";
 import "./GameCard.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function GameCard({ gameCard, index }) {
   return (
@@ -10,11 +9,21 @@ function GameCard({ gameCard, index }) {
         front: (
           <div className="text-center pt-2">
             <h5 className="CardHeader">{gameCard.name}</h5>
-            <img className="CardImg" src={defaultGamePicture} />
+            <img
+              className="CardImg"
+              src={defaultGamePicture}
+              alt={gameCard.name}
+            />
             <div className="ButtonContainer">
-              <div role={"button"} className="ViewLevelsBtn"></div>
-              <div role={"button"} className="PlayGameBtn"></div>
-              <div role={"button"} className="ExamineGame"></div>
+              <div role={"button"} className="ViewLevelsBtn">
+                <h6>MENU</h6>
+              </div>
+              <div role={"button"} className="PlayGameBtn">
+                <h6>PLAY</h6>
+              </div>
+              <div role={"button"} className="ExamineGame">
+                <h6>MORE</h6>
+              </div>
             </div>
           </div>
         ),
