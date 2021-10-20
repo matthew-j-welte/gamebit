@@ -4,6 +4,21 @@
 
 Main screen where you can find the most popular/featured games
 
+**IDEA**:
+
+- Possibly have gifs of the games (or just characters from the games) that fade in and out on the top part of the gamepad screen
+- OR have the leaderboard right there
+
+Sections:
+
+- Continue Playing
+- New & Popular (Symbol for new and symbol for popular)
+- Browse All
+
+Have the cards be somewhat shaped like board game boxes and designed in a similar way so you can rotate it
+
+- On the back have a gif of the gameplay in a cutout
+
 ## Stack Page (Name pending)
 
 Place where curious developers can go and get an in depth look at the technology used to create gamebit, some examples:
