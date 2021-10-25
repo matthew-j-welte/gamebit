@@ -39,6 +39,32 @@ Place where curious developers can go and get an in depth look at the technology
 - Show language rankings (languages favored in games)
 - Favorite games
 
+Fields:
+
+PlayerProfileViewModel:
+
+- Username
+- OverallRanking
+- VerifiedPlayerFullName
+- ProfileImageUrl
+- Level
+- PreviousLevelExperience
+- Experience
+- NextLevelExperience
+- Tokens
+- PrograammingLanguageExclusions
+- ProfessionalTitle
+- YearsTechnicalExperience
+- PlayerBio
+
+PlayerProgrammingLanguageDto
+
+- ProgrammingLanguageId
+- ProgrammingLangaugeName
+- ProgrammingLangaugeIconUrl
+
+**what if instead of keeping image urls in a bunch of different entities just use the id of that particular entity (for example ProgrammingLanguageId for logos of the languages) in a lookup of some kind on the frontend? or cached in the backend? I guess ideally it should be able to be updated without redeployment and be shared across all microservices**
+
 ## Tokens
 
 Similar to milestones or trophies. The main "reward system" found in gamebit
