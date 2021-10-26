@@ -22,7 +22,7 @@ class Gamepad extends React.Component {
     // TODO: Make this async
     GameService.getGameCards().forEach((gameCard) => {
       allCards.push(gameCard);
-      if (gameCard.playerCompletionPercentage) {
+      if (gameCard.plays % 3 === 2) {
         continuePlayingCards.push(gameCard);
       } else if (gameCard.rating >= 4.1) {
         newAndPopularCards.push(gameCard);

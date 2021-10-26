@@ -79,4 +79,4 @@ const PlayerService = {
   },
 };
 
-export default GameService;
+export default PlayerService;

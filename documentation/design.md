@@ -76,3 +76,14 @@ Will most likely earn it through other means
 By submitting bugs
 
 - Could be cool to include a description for the developer who submitted it on how we fixed it
+
+Should be able to use points in the frontend itself and in games
+
+---
+
+Feel like I should move away from designing this like the "main" page will be the gamepad
+Think about it, how often do you spend time searching for new games (especially with how log the game count will be) compared to the time spent playing the games, viewing your stats, claiming rewards/upgrades etc.
+
+Turn the bottom bar of the Profile jumbotron into a sticky navbar
+
+As people level up they can unlock new profile "themes" (thinking top part of profile can have some background image possibly with an overlay)

@@ -1,0 +1,39 @@
+.DarkHR {
+  height: 1px;
+  border: none;
+  background-color: rgb(37, 37, 83);
+  margin: 20px;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  font-family: "Righteous", cursive;
+  background-color: rgb(24, 24, 27);
+
+  h1 {
+    color: rgb(202, 153, 39);
+    font-size: 46px;
+    text-shadow: 1px 1px 8px rgb(0, 0, 0), 1px 1px 12px rgb(0, 0, 0);
+  }
+
+  h6 {
+    color: rgb(178, 193, 202);
+  }
+
+  h2 {
+    color: rgb(245, 201, 108);
+    padding-top: 4px;
+  }
+}
+
+.ProfileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: solid 7px rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container {
+  font-family: "Righteous", cursive;
+}
