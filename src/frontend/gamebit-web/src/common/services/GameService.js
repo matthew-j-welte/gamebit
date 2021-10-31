@@ -8,7 +8,6 @@ const GameService = {
         rating: 4.1,
         difficulty: 85,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 100,
         playerRanking: 392,
       },
       {
@@ -18,7 +17,6 @@ const GameService = {
         rating: 4.7,
         difficulty: 32,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 0,
         playerRanking: null,
       },
       {
@@ -28,7 +26,6 @@ const GameService = {
         rating: 4.3,
         difficulty: 56,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 0,
         playerRanking: null,
       },
       {
@@ -38,7 +35,6 @@ const GameService = {
         rating: 4.9,
         difficulty: 77,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 24,
         playerRanking: 1596,
       },
       {
@@ -48,7 +44,6 @@ const GameService = {
         rating: 3.9,
         difficulty: 91,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 3,
         playerRanking: null,
       },
       {
@@ -58,7 +53,6 @@ const GameService = {
         rating: 4.7,
         difficulty: 24,
         description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerCompletionPercentage: 0,
         playerRanking: null,
       },
     ];

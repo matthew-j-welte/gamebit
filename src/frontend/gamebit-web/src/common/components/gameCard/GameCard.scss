@@ -1,82 +1,105 @@
 .CardHeader {
   font-family: "Righteous", cursive;
-  text-shadow: rgba(62, 71, 189, 0.932) 18px 4px 22px;
+  font-size: 32px;
+  text-shadow: rgba(0, 0, 0, 0.932) 0px 0px 22px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(26, 26, 32);
 }
 
-.CardImg {
-  margin-left: 28px;
-  margin-top: 10px;
-  width: 240px;
-  height: 100px;
-  display: inherit;
-  border-radius: 25px;
-  border: solid 2px black;
+.GameCardContainer {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 200px;
+}
+
+.GameCard {
+  padding-top: 60px;
+  border-radius: 6px;
+  width: 360px;
+  height: 172px;
+  color: whitesmoke;
+  text-align: center;
+  background-size: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+  .PlayButton {
+    opacity: 0;
+    position: relative;
+    top: 60px;
+    transition: opacity 0.1s ease-in-out;
+  }
+}
+
+.GameCard:hover {
+  .PlayButton {
+    opacity: 1;
+    position: relative;
+    top: 60px;
+  }
+}
+
+.GameCardOverlay {
+  opacity: 0;
+  position: relative;
+  top: -172px;
+  height: 172px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.089);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow, opacity 0.2s ease-in-out;
+}
+
+.GameCardOverlay:hover {
+  cursor: pointer;
+  box-shadow: 0 0px 18px 0 rgba(0, 0, 0, 0.349);
+  opacity: 1;
 }
 
 .ButtonContainer {
+  position: relative;
+  top: 140px;
+  margin-left: 40px;
+  margin-right: 40px;
+
   div {
-    position: absolute;
     font-family: "Righteous", cursive;
     border-radius: 24px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 1px,
       rgba(0, 0, 0, 0.3) 0px 0px 0px -3px, rgba(0, 0, 0, 0.2) 0px -2px 0px inset;
+    transition: color 0.5s ease;
+    color: rgb(219, 219, 219);
+
+    h6 {
+      transition: text-shadow 0.1s ease;
+    }
+  }
+
+  div:hover {
+    color: rgb(255, 255, 255);
+
+    h6 {
+      text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;
+    }
   }
 
   .ViewLevelsBtn {
     width: 72px;
     height: 24px;
-    top: 160px;
-    left: 22px;
-    background-color: rgb(60, 42, 219);
-    background-image: radial-gradient(
-      rgba(159, 151, 228, 0.315),
-      rgb(60, 42, 219) 97%
-    );
-  }
-
-  .ViewLevelsBtn:hover {
-    background-image: radial-gradient(
-      rgba(159, 151, 228, 0.315),
-      rgb(50, 63, 255) 97%
-    );
   }
 
   .PlayGameBtn {
     width: 84px;
     height: 32px;
-    top: 154px;
-    left: 86px;
-    background-color: rgb(63, 170, 90);
-    background-image: radial-gradient(
-      rgba(98, 230, 116, 0.356),
-      rgb(63, 170, 90) 97%
-    );
     margin-left: 18px;
     margin-right: 18px;
-    color: white;
 
     h6 {
-      font-size: 24px;
+      font-size: 22px;
     }
-  }
-
-  .PlayGameBtn:hover {
-    background-image: radial-gradient(
-      rgba(98, 230, 116, 0.356),
-      rgb(77, 207, 110) 97%
-    );
   }
 
   .ExamineGame {
     width: 72px;
     height: 24px;
-    top: 160px;
-    left: 198px;
-    background-color: rgb(109, 117, 236);
-    background-image: radial-gradient(rgb(109, 117, 236), rgb(65, 14, 158) 97%);
-  }
-
-  .ExamineGame:hover {
-    background-image: radial-gradient(rgb(109, 117, 236), rgb(80, 17, 197) 97%);
   }
 }
