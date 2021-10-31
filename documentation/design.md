@@ -1,89 +1,79 @@
 # Frontend Features
 
-## Gamepad
+## Landing Page
 
-Main screen where you can find the most popular/featured games
+Sign Up/Login screen for those who arent already logged in
 
-**IDEA**:
+## Homepage
 
-- Possibly have gifs of the games (or just characters from the games) that fade in and out on the top part of the gamepad screen
-- OR have the leaderboard right there
+- Jumbotron
+  - Profile photo
+  - Username
+  - Rank
+  - Level (with level bar)
+  - Tokens
+- Notifications carousel
+- Continue Playing Games (Top 3)
+  - With re-route to Gamepage
+- Leaderboard with a few other players
+  - With re-route to full leaderboard
+- View Gamer Card
+  - With re-route to edit gamer card
 
-Sections:
+## Gamepage (name pending)
 
+- Jumbotron that plays game previews
+  - Starts playing the featured games by default on page load
+  - Shows the game being hovered over otherwise
+- To Browse all Games
+- Featured Games (possibly taking up the full width of the container)
 - Continue Playing
-- New & Popular (Symbol for new and symbol for popular)
-- Browse All
+- New Games
+- Browse all Games
+  - Sort By
+  - Filter
 
-Have the cards be somewhat shaped like board game boxes and designed in a similar way so you can rotate it
+## Game Details
 
-- On the back have a gif of the gameplay in a cutout
+- Jumbotron with game picture as background and large name
 
-## Stack Page (Name pending)
+  - Below the picture include:
+    - Creator (link to gamer card)
+    - Reviews (0-5 stars)
+    - Total Plays
 
-Place where curious developers can go and get an in depth look at the technology used to create gamebit, some examples:
+- 3 tabs
+  - Leaderboard
+    - Top 3 in large triangle shape at the top in gold silver and bronze
+    - top 10/25 leaderboard below
+  - Game Details
+    - Date Created
+    - Game description
+    - Game languages
+    - Game skills
+    - Difficulty
+    - Total Tokens
+  - Player Stats
+    - Rank
+    - Progress (if available)
+    - Plays
+    - Tokens close to earned (if the game has tokens like that)
+    - Total tokens / earned tokens
 
-- The language each game was written in
-- The frontend framework
-- The hosting framework (K8s)
-- The manner in which we architect/scale our games/APIs
-- Maybe some fun facts about each game too
-  - Source code lines
-  - Size of game in MBs
-  - Author? Assuming others start joining? Or maybe call it "Lead Developer" and have a link to their profile
+## Leaderboard
 
-## My Profile
+- Top 3 Players
+- Top 10 players
+- Your +/- 10 ranks
+- Your highest ranked games
+  - +/ 3-10 ranks for each game
 
-- Show Experience
-- Show tokens
-- Show language rankings (languages favored in games)
-- Favorite games
+## Gamer Card (Modal)
 
-Fields:
-
-PlayerProfileViewModel:
-
-- Username
-- OverallRanking
-- VerifiedPlayerFullName
-- ProfileImageUrl
-- Level
-- PreviousLevelExperience
-- Experience
-- NextLevelExperience
+- Top portion small jumbotron similar to homepage
+- Lvl
 - Tokens
-- PrograammingLanguageExclusions
-- ProfessionalTitle
-- YearsTechnicalExperience
-- PlayerBio
-
-PlayerProgrammingLanguageDto
-
-- ProgrammingLanguageId
-- ProgrammingLangaugeName
-- ProgrammingLangaugeIconUrl
-
-**what if instead of keeping image urls in a bunch of different entities just use the id of that particular entity (for example ProgrammingLanguageId for logos of the languages) in a lookup of some kind on the frontend? or cached in the backend? I guess ideally it should be able to be updated without redeployment and be shared across all microservices**
-
-## Tokens
-
-Similar to milestones or trophies. The main "reward system" found in gamebit
-
-## Experience
-
-Will earn experience with each token.
-Will most likely earn it through other means
-By submitting bugs
-
-- Could be cool to include a description for the developer who submitted it on how we fixed it
-
-Should be able to use points in the frontend itself and in games
-
----
-
-Feel like I should move away from designing this like the "main" page will be the gamepad
-Think about it, how often do you spend time searching for new games (especially with how log the game count will be) compared to the time spent playing the games, viewing your stats, claiming rewards/upgrades etc.
-
-Turn the bottom bar of the Profile jumbotron into a sticky navbar
-
-As people level up they can unlock new profile "themes" (thinking top part of profile can have some background image possibly with an overlay)
+- Top Games (small cards)
+- Rank
+- Title (Maybe)
+- Verified Name (if available)
