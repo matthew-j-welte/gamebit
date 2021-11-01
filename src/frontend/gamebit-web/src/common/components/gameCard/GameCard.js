@@ -1,4 +1,3 @@
-import defaultGamePicture from "../../../assets/sample-arcade-game.jpg";
 import mountainGameImg from "../../../assets/sample-mountain-game.png";
 import spaceGameImg from "../../../assets/sample-space-game.jpg";
 import retroGameImg from "../../../assets/sample-retro-game.jpg";

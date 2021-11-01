@@ -5,6 +5,18 @@
   margin: 20px;
 }
 
+.LightGradientHR {
+  height: 1px;
+  border: none;
+  background: rgb(189, 197, 213);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 197, 213, 1) 17%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  margin: 8px 0px 12px 0px;
+}
+
 .ProfileJumbotronBackground {
   width: 100%;
   background-color: rgb(24, 24, 27);
@@ -28,6 +40,11 @@
     color: rgb(245, 201, 108);
     padding-top: 4px;
   }
+}
+
+.JumbotronSubheaderContainer {
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .ProfileImage {

@@ -1,0 +1,66 @@
+.NotificationsSection {
+}
+
+.NotificationTypeIcon {
+  height: 0px;
+  position: relative;
+  bottom: 26px;
+  left: -58px;
+}
+
+.MoreDetailsLink {
+  color: rgb(202, 153, 39);
+  text-decoration: unset;
+}
+
+.NotificationCountIcon {
+  background-color: rgb(233, 74, 0);
+  text-align: center;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  bottom: 26px;
+  right: -101%;
+}
+
+.NotificationContent {
+  margin-top: -32px;
+}
+
+.HideNotificationsButton {
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgb(202, 153, 39);
+  border-radius: 12px;
+  padding: 6px 32px;
+}
+
+.HideNotificationsSepLeft {
+  height: 2px;
+  background: rgb(202, 153, 39);
+  background: linear-gradient(
+    270deg,
+    rgb(202, 153, 39) 17%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.HideNotificationsSepRight {
+  height: 2px;
+  background: rgb(202, 153, 39);
+  background: linear-gradient(
+    90deg,
+    rgb(202, 153, 39) 17%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.NotificationsTextArea {
+  width: 90%;
+  max-width: 1000px;
+  padding: 10px 30px 10px 50px;
+  background-color: rgb(49, 52, 66);
+  border-radius: 6px;
+}

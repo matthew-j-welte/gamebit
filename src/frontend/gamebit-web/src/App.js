@@ -1,10 +1,10 @@
 import "./App.scss";
 import Gamepad from "./gamepad/Gamepad";
-import PlayerProfile from "./player-profile/PlayerProfile";
+import Homepage from "./homepage/Homepage";
 
 function App() {
   // return <Gamepad />;
-  return <PlayerProfile />;
+  return <Homepage />;
 }
 
 export default App;
