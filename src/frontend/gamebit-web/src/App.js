@@ -1,5 +1,4 @@
 import "./App.scss";
-import Gamepad from "./gamepad/Gamepad";
 import Homepage from "./homepage/Homepage";
 
 function App() {

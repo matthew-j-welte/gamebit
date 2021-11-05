@@ -55,6 +55,124 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.ProfileImageOverlay {
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: solid 7px rgb(0, 0, 0);
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 100;
+  position: absolute;
+  top: 16px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ProfileImageOverlay:hover {
+  opacity: 1;
+}
+
+.ProfileImage:after {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: solid 7px rgb(0, 0, 0);
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(255, 255, 255, 0.199);
+  z-index: 100;
+  position: relative;
+  top: 0px;
+}
+
 .container {
   font-family: "Righteous", cursive;
+}
+
+.HideNotificationsButton {
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 3px solid rgba(202, 153, 39, 0.75);
+  border-radius: 12px;
+  padding: 6px 32px;
+  transition: background-color 0.2s ease-in-out;
+  outline: none;
+}
+
+.HideNotificationsButton:focus {
+  outline: none;
+  border: 3px solid rgba(202, 153, 39, 0.75);
+}
+
+.HideNotificationsButton:hover {
+  background-color: rgba(192, 188, 180, 0.055);
+}
+
+.HideNotificationsSepLeft {
+  height: 2px;
+  background: rgba(202, 153, 39, 0.75);
+  background: linear-gradient(
+    270deg,
+    rgba(202, 153, 39, 0.75) 17%,
+    rgba(202, 153, 39, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.HideNotificationsSepRight {
+  height: 2px;
+  background: rgba(202, 153, 39, 0.75);
+  background: linear-gradient(
+    90deg,
+    rgba(202, 153, 39, 0.75) 17%,
+    rgba(202, 153, 39, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.HideNotificationsSection {
+  position: relative;
+  top: -46px;
+  height: 0px;
+
+  .HideNotificationsButton {
+    position: relative;
+    top: 0px;
+  }
+
+  .HideNotificationsSepLeft {
+    position: relative;
+    top: 0px;
+  }
+
+  .HideNotificationsSepRight {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.ViewGamerCardBtn {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: whitesmoke;
+  background-color: rgb(22, 119, 163);
+  border: none;
+  border-radius: 0px;
+  box-shadow: rgb(2, 16, 31) 0px 20px 30px -10px;
+  padding: 6px 32px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.ViewGamerCardBtn:hover {
+  outline: none;
+  background-color: rgb(43, 143, 189);
+  box-shadow: rgb(1, 10, 20) 0px 30px 40px -10px;
+}
+
+.ViewGamerCardBtn:focus {
+  outline: none;
+  border: 3px solid rgba(202, 153, 39, 0.75);
 }

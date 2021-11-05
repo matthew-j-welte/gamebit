@@ -6,20 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoins,
   faLongArrowAltUp,
-  faChevronLeft,
-  faChevronRight,
-  faTrophy,
-  faPlus,
   faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import GameCard from "../common/components/gameCard/GameCard";
 import NotificationsCarousel from "./components/NotificationsCarousel";
+import LeaderboardPreview from "../common/components/leaderboard/LeaderboardPreview";
 
 class PlayerProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       profile: {},
+      showNotifications: true,
     };
   }
 
@@ -56,6 +54,17 @@ class PlayerProfile extends React.Component {
             src={defaultProfile}
             alt={defaultProfile}
           />
+          <div className="ProfileImageOverlay text-center">
+            <div className="py-2 mt-4">
+              <strong>EDIT</strong>
+            </div>
+            <div className="py-2">
+              <a href="/">Profile</a>
+            </div>
+            <div className="py-2">
+              <a href="/">Player Card</a>
+            </div>
+          </div>
           <div className="pl-5">
             <h1>{profile.username}</h1>
           </div>
@@ -82,12 +91,34 @@ class PlayerProfile extends React.Component {
     );
 
     const notificationSection = (
-      <div className="NotificationsSection pt-4">
-        <NotificationsCarousel />
-        <div className="text-center d-flex align-items-center mt-4">
+      <div
+        className={
+          this.state.showNotifications
+            ? "NotificationsSection"
+            : "NotificationsSection HideNotificationsSection"
+        }
+      >
+        {this.state.showNotifications ? (
+          <div className="pb-4">
+            <NotificationsCarousel />
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className="text-center d-flex align-items-center">
           <div className="HideNotificationsSepLeft flex-fill"></div>
-          <button className="HideNotificationsButton">
-            Hide Notifications
+          <button
+            className="HideNotificationsButton"
+            onClick={() =>
+              this.setState({
+                ...this.state,
+                showNotifications: !this.state.showNotifications,
+              })
+            }
+          >
+            <small>
+              {this.state.showNotifications ? "Hide" : "Show"} Notifications
+            </small>
           </button>
           <div className="HideNotificationsSepRight flex-fill"></div>
         </div>
@@ -100,12 +131,27 @@ class PlayerProfile extends React.Component {
         <div className="d-flex justify-content-between pt-2">
           {topGameCards}
         </div>
+        <div className="w-100 text-right mt-5">
+          <h4>
+            <a href="/">
+              To GamePad <FontAwesomeIcon icon={faArrowCircleRight} />
+            </a>
+          </h4>
+        </div>
       </div>
     );
 
     const leaderboardSection = (
       <div className="LeaderboardSection pt-5">
-        <h2>Leaderboard</h2>
+        <h2>Your Ranking</h2>
+        <LeaderboardPreview rankings={this.state.profile.playerRankings} />
+        <div className="w-100 text-right">
+          <h4>
+            <a href="/">
+              To Leaderboards <FontAwesomeIcon icon={faArrowCircleRight} />
+            </a>
+          </h4>
+        </div>
       </div>
     );
 
