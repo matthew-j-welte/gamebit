@@ -1,8 +1,13 @@
-import defaultGamePicture from "../../../assets/sample-arcade-game.jpg";
 import mountainGameImg from "../../../assets/sample-mountain-game.png";
 import spaceGameImg from "../../../assets/sample-space-game.jpg";
 import retroGameImg from "../../../assets/sample-retro-game.jpg";
 import "./GameCard.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChartLine,
+  faPlay,
+  faTrophy,
+} from "@fortawesome/free-solid-svg-icons";
 
 const imgMap = {
   "sample-mountain-game.png": mountainGameImg,
@@ -19,44 +24,25 @@ function GameCard({ gameCard }) {
           backgroundImage: `url(${imgMap[gameCard.gameImageUrl]})`,
         }}
       >
-        {/* <div
-        className="CardImg"
-        style={{
-          backgroundImage: imgMap[gameCard.gameImageUrl],
-        }}
-      /> */}
         <h5 className="CardHeader">{gameCard.name}</h5>
-        {/* <div className="ButtonContainer d-flex justify-content-between align-items-center pt-2">
-          <div
-            role={"button"}
-            className="ViewLevelsBtn"
-            style={{
-              backgroundColor: gameCard.secondaryColor,
-            }}
-          >
-            <h6>MENU</h6>
-          </div>
-          <div
-            role={"button"}
-            className="PlayGameBtn"
-            style={{
-              backgroundColor: gameCard.primaryColor,
-            }}
-          >
-            <h6>PLAY</h6>
-          </div>
-          <div
-            role={"button"}
-            className="ExamineGame"
-            style={{
-              backgroundColor: gameCard.secondaryColor,
-            }}
-          >
-            <h6>MORE</h6>
-          </div>
-        </div> */}
       </div>
-      <div className="GameCardOverlay"></div>
+      <div className="GameCardBottomBar d-flex justify-content-around align-items-center">
+        <div>
+          <FontAwesomeIcon icon={faPlay} />
+          <em className="pl-2">{gameCard.playerPlays}</em>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faChartLine} />
+          <em className="pl-2">{gameCard.playerRanking}</em>
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faTrophy} />
+          <em className="pl-2">
+            {gameCard.tokensEarned} / {gameCard.totalGameTokens}
+          </em>
+        </div>
+      </div>
+      <div className="GameCardOverlay w-100"></div>
     </div>
   );
 }

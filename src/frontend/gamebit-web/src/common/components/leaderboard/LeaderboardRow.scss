@@ -1,0 +1,73 @@
+.Row {
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-image: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(41, 42, 50, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    100% 0 100% 0/1px 0 1px 0 stretch;
+  transition: all 0.3s ease-in-out;
+}
+
+.Row:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(219, 159, 30, 0.466) 100%
+  );
+  cursor: pointer;
+}
+
+.HeaderRow {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(87, 89, 102, 0.466) 100%
+  );
+}
+
+.HeaderRow:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(87, 89, 102, 0.466) 100%
+  );
+  cursor: unset;
+}
+
+.PlayerRow {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(219, 159, 30, 0.266) 100%
+  );
+}
+
+.RankRow {
+  width: 5%;
+  text-align: center;
+}
+
+.UsernameRow {
+  width: 60%;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.LevelRow {
+  width: 10%;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.ExperienceRow {
+  width: 25%;
+  text-align: left;
+  padding-left: 8px;
+}
