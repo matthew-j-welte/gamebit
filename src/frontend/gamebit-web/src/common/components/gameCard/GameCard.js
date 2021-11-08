@@ -1,3 +1,5 @@
+import React, { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import mountainGameImg from "../../../assets/sample-mountain-game.png";
 import spaceGameImg from "../../../assets/sample-space-game.jpg";
 import retroGameImg from "../../../assets/sample-retro-game.jpg";
@@ -8,6 +10,7 @@ import {
   faPlay,
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
+import { GAME_DETAILS_ROUTE } from "../../constants/routes";
 
 const imgMap = {
   "sample-mountain-game.png": mountainGameImg,
@@ -16,6 +19,12 @@ const imgMap = {
 };
 
 function GameCard({ gameCard }) {
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(
+    () => navigate(GAME_DETAILS_ROUTE.replace(":gameId", gameCard.gameId)),
+    [navigate, gameCard.gameId]
+  );
+
   return (
     <div className="GameCardContainer">
       <div
@@ -26,7 +35,8 @@ function GameCard({ gameCard }) {
       >
         <h5 className="CardHeader">{gameCard.name}</h5>
       </div>
-      <div className="GameCardBottomBar d-flex justify-content-around align-items-center">
+
+      <div className="GameCardBottomBar d-flex justify-content-between align-items-center">
         <div>
           <FontAwesomeIcon icon={faPlay} />
           <em className="pl-2">{gameCard.playerPlays}</em>
@@ -42,7 +52,7 @@ function GameCard({ gameCard }) {
           </em>
         </div>
       </div>
-      <div className="GameCardOverlay w-100"></div>
+      <div className="GameCardOverlay w-100" onClick={handleOnClick}></div>
     </div>
   );
 }

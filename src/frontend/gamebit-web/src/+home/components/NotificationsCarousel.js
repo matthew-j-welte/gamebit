@@ -91,7 +91,7 @@ function NotificationsCarousel() {
   ));
 
   return (
-    <div className="d-flex justify-content-between align-items-center">
+    <div className="NotificationCarousel d-flex justify-content-between align-items-center">
       <h2 role={"button"} onClick={() => onArrowClick(-1)}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </h2>

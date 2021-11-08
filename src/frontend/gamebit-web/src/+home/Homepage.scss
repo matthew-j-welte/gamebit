@@ -1,3 +1,7 @@
+@import "../common/scss/colors.scss";
+@import "../common/scss/fonts.scss";
+@import "../common/scss/styles.scss";
+
 .DarkHR {
   height: 1px;
   border: none;
@@ -6,12 +10,12 @@
 }
 
 .LightGradientHR {
-  height: 1px;
+  height: 3px;
   border: none;
   background: rgb(189, 197, 213);
   background: linear-gradient(
     90deg,
-    rgba(189, 197, 213, 1) 17%,
+    $bodyHeaderColor 17%,
     rgba(0, 0, 0, 0) 100%
   );
   margin: 8px 0px 12px 0px;
@@ -19,25 +23,27 @@
 
 .ProfileJumbotronBackground {
   width: 100%;
-  background-color: rgb(24, 24, 27);
+  background-color: $jumbotronBackground;
 }
 
 .ProfileJumbotron {
   max-width: 1920px;
-  font-family: "Righteous", cursive;
+  font-family: $jumbotronHeader;
 
   h1 {
-    color: rgb(202, 153, 39);
-    font-size: 46px;
-    text-shadow: 1px 1px 8px rgb(0, 0, 0), 1px 1px 12px rgb(0, 0, 0);
+    color: $jumbotronHeaderColor;
+    font-family: $jumbotronHeader;
+    font-size: 68px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.253), 1px 1px 8px rgb(0, 0, 0.253);
   }
 
   h6 {
-    color: rgb(178, 193, 202);
+    color: rgb(22, 22, 22);
   }
 
   h2 {
-    color: rgb(245, 201, 108);
+    color: $jumbotronSubHeaderColor;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.253), 1px 1px 8px rgb(0, 0, 0.253);
     padding-top: 4px;
   }
 }
@@ -57,12 +63,13 @@
 
 .ProfileImageOverlay {
   opacity: 0;
+  color: white;
   width: 200px;
   height: 200px;
   border-radius: 100%;
   border: solid 7px rgb(0, 0, 0);
   // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 100;
   position: absolute;
   top: 16px;
@@ -85,15 +92,11 @@
   top: 0px;
 }
 
-.container {
-  font-family: "Righteous", cursive;
-}
-
 .HideNotificationsButton {
   text-transform: uppercase;
   color: white;
-  background-color: transparent;
-  border: 3px solid rgba(202, 153, 39, 0.75);
+  background-color: $bodyHeaderColor;
+  border: none;
   border-radius: 12px;
   padding: 6px 32px;
   transition: background-color 0.2s ease-in-out;
@@ -102,38 +105,35 @@
 
 .HideNotificationsButton:focus {
   outline: none;
-  border: 3px solid rgba(202, 153, 39, 0.75);
+  border: none;
 }
 
 .HideNotificationsButton:hover {
-  background-color: rgba(192, 188, 180, 0.055);
+  background-color: $bodyHeaderColorHover;
 }
 
 .HideNotificationsSepLeft {
   height: 2px;
-  background: rgba(202, 153, 39, 0.75);
-  background: linear-gradient(
-    270deg,
-    rgba(202, 153, 39, 0.75) 17%,
-    rgba(202, 153, 39, 0.5) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: $backgroundHR;
+  background: linear-gradient(270deg, $backgroundHR 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .HideNotificationsSepRight {
   height: 2px;
-  background: rgba(202, 153, 39, 0.75);
-  background: linear-gradient(
-    90deg,
-    rgba(202, 153, 39, 0.75) 17%,
-    rgba(202, 153, 39, 0.5) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: $backgroundHR;
+  background: linear-gradient(90deg, $backgroundHR 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.LeaderboardSection {
+  background-color: $background;
+  border-radius: 10px;
+  padding: 0 0 20px 0;
+  box-shadow: $subtleBoxShadow;
 }
 
 .HideNotificationsSection {
   position: relative;
-  top: -46px;
+  top: -42px;
   height: 0px;
 
   .HideNotificationsButton {
@@ -150,29 +150,4 @@
     position: relative;
     top: 0px;
   }
-}
-
-.ViewGamerCardBtn {
-  width: 100%;
-  text-align: center;
-  font-size: 24px;
-  color: whitesmoke;
-  background-color: rgb(22, 119, 163);
-  border: none;
-  border-radius: 0px;
-  box-shadow: rgb(2, 16, 31) 0px 20px 30px -10px;
-  padding: 6px 32px;
-  transition: all 0.2s ease-in-out;
-  outline: none;
-}
-
-.ViewGamerCardBtn:hover {
-  outline: none;
-  background-color: rgb(43, 143, 189);
-  box-shadow: rgb(1, 10, 20) 0px 30px 40px -10px;
-}
-
-.ViewGamerCardBtn:focus {
-  outline: none;
-  border: 3px solid rgba(202, 153, 39, 0.75);
 }

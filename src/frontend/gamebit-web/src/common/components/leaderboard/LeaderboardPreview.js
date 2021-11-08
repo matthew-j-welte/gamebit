@@ -17,6 +17,7 @@ function LeaderboardPreview({ rankings }) {
 
   const rankingRows = rankings?.map((ranking) => (
     <LeaderboardRow
+      key={ranking.username}
       ranking={ranking}
       isHeader={false}
       isLoggedInPlayerRow={loggedInUser.username === ranking.username}
@@ -24,7 +25,7 @@ function LeaderboardPreview({ rankings }) {
   ));
 
   return (
-    <div className="p-4">
+    <div className="p-0 rounded">
       {headerRow}
       {rankingRows}
     </div>

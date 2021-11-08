@@ -57,6 +57,10 @@ const GameService = {
       },
     ];
   },
+
+  getGameDetails: function () {
+    return {};
+  },
 };
 
 export default GameService;

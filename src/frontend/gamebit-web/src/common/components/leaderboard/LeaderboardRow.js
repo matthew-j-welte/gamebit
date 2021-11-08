@@ -8,7 +8,7 @@ function LeaderboardRow({ ranking, isHeader, isLoggedInPlayerRow }) {
   return (
     <div
       className={
-        "Row w-100 d-flex" +
+        "Row w-100 d-flex px-4" +
         (isHeader ? " HeaderRow" : isLoggedInPlayerRow ? " PlayerRow" : "")
       }
     >

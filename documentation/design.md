@@ -60,6 +60,8 @@ Sign Up/Login screen for those who arent already logged in
     - Tokens close to earned (if the game has tokens like that)
     - Total tokens / earned tokens
 
+| Leaderboard | Game Details | Progress |
+
 ## Leaderboard
 
 - Top 3 Players
@@ -77,3 +79,17 @@ Sign Up/Login screen for those who arent already logged in
 - Rank
 - Title (Maybe)
 - Verified Name (if available)
+
+## Notification Details (Modal)
+
+---
+
+# Frontend URLs
+
+- Landing Page: /
+- Home Page: /home
+- GamePad Page: /gamepad
+- Game Details Page:
+  - /game/<gameId>?tab=leaderboard
+  - /game/<gameId>?tab=details
+  - /game/<gameId>?tab=player

@@ -1,9 +1,13 @@
+@import "./common/scss/colors.scss";
+@import "./common/scss/fonts.scss";
+
 a {
-  color: rgb(202, 153, 39);
+  color: $anchorTagColor;
+  font-family: $bodyFont;
   text-decoration: unset;
 }
 
 a:hover {
-  color: rgb(233, 184, 71);
+  color: $anchorTagColorHover;
   text-decoration: unset;
 }

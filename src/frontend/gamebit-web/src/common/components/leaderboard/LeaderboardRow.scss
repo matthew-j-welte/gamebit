@@ -1,73 +1,67 @@
+@import "../../scss/colors.scss";
+@import "../../scss/fonts.scss";
+
 .Row {
+  font-family: $bodyFont;
+  font-weight: 300;
   height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: transparent;
+  border-radius: 0px;
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(
       270deg,
       rgba(0, 0, 0, 0) 0%,
-      rgba(41, 42, 50, 1) 50%,
+      $tableHeaderBackground 50%,
       rgba(0, 0, 0, 0) 100%
     )
     100% 0 100% 0/1px 0 1px 0 stretch;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .Row:hover {
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(219, 159, 30, 0.466) 100%
-  );
+  background-color: $jumbotronHeaderColorTransparent3;
   cursor: pointer;
 }
 
 .HeaderRow {
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(87, 89, 102, 0.466) 100%
-  );
+  font-size: large;
+  font-style: italic;
+  background-color: $tableHeaderBackground;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .HeaderRow:hover {
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(87, 89, 102, 0.466) 100%
-  );
+  background-color: $tableHeaderBackground;
   cursor: unset;
 }
 
 .PlayerRow {
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(219, 159, 30, 0.266) 100%
-  );
+  background-color: $jumbotronHeaderColorTransparent2;
 }
 
 .RankRow {
-  width: 5%;
-  text-align: center;
+  width: 15%;
+  text-align: left;
 }
 
 .UsernameRow {
-  width: 60%;
+  width: 45%;
   text-align: left;
   padding-left: 8px;
 }
 
 .LevelRow {
-  width: 10%;
-  text-align: left;
+  width: 20%;
+  text-align: right;
   padding-left: 8px;
 }
 
 .ExperienceRow {
-  width: 25%;
-  text-align: left;
+  width: 20%;
+  text-align: right;
   padding-left: 8px;
 }

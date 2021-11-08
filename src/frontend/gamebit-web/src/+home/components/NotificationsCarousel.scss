@@ -1,0 +1,50 @@
+@import "../../common/scss/colors.scss";
+@import "../../common/scss/fonts.scss";
+
+.NotificationTypeIcon {
+  height: 0px;
+  position: relative;
+  bottom: 26px;
+  left: -58px;
+}
+
+.NotificationCountIcon {
+  background-color: $anchorTagColor;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  bottom: 26px;
+  right: -101%;
+}
+
+.NotificationContent {
+  margin-top: -32px;
+}
+
+.NotificationsTextArea {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  width: 90%;
+  max-width: 1000px;
+  padding: 10px 30px 10px 50px;
+  background-color: $cardBackground;
+  border-radius: 6px;
+}
+
+.NotificationCarousel {
+  h5 {
+    color: $bodyHeaderColor;
+  }
+
+  h2 {
+    color: $bodyNavArrowColor;
+  }
+
+  h4 {
+    font-family: $bodyFont;
+    color: white;
+  }
+}

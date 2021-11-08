@@ -11,6 +11,8 @@ import {
 import GameCard from "../common/components/gameCard/GameCard";
 import NotificationsCarousel from "./components/NotificationsCarousel";
 import LeaderboardPreview from "../common/components/leaderboard/LeaderboardPreview";
+import { Link } from "react-router-dom";
+import { GAMEPAD_ROUTE, LEADERBOARDS_ROUTE } from "../common/constants/routes";
 
 class PlayerProfile extends React.Component {
   constructor(props) {
@@ -126,31 +128,33 @@ class PlayerProfile extends React.Component {
     );
 
     const topGameSection = (
-      <div className="TopGamesSection pt-4 mt-5">
+      <div className="TopGamesSection pt-2 pb-4 mt-5">
         <h2>Continue Playing</h2>
         <div className="d-flex justify-content-between pt-2">
           {topGameCards}
         </div>
-        <div className="w-100 text-right mt-5">
-          <h4>
-            <a href="/">
-              To GamePad <FontAwesomeIcon icon={faArrowCircleRight} />
-            </a>
-          </h4>
+        <div className="w-100 text-right mt-4">
+          <h5>
+            <Link to={GAMEPAD_ROUTE}>
+              To Game Pad <FontAwesomeIcon icon={faArrowCircleRight} />
+            </Link>
+          </h5>
         </div>
       </div>
     );
 
     const leaderboardSection = (
-      <div className="LeaderboardSection pt-5">
-        <h2>Your Ranking</h2>
-        <LeaderboardPreview rankings={this.state.profile.playerRankings} />
-        <div className="w-100 text-right">
-          <h4>
-            <a href="/">
+      <div className="mt-5">
+        <h2>Leaderboard Preview</h2>
+        <div className="LeaderboardSection mt-3">
+          <LeaderboardPreview rankings={this.state.profile.playerRankings} />
+        </div>
+        <div className="w-100 text-right mt-3">
+          <h5>
+            <Link to={LEADERBOARDS_ROUTE}>
               To Leaderboards <FontAwesomeIcon icon={faArrowCircleRight} />
-            </a>
-          </h4>
+            </Link>
+          </h5>
         </div>
       </div>
     );
