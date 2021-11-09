@@ -12,7 +12,7 @@ import GameCard from "../common/components/gameCard/GameCard";
 import NotificationsCarousel from "./components/NotificationsCarousel";
 import LeaderboardPreview from "../common/components/leaderboard/LeaderboardPreview";
 import { Link } from "react-router-dom";
-import { GAMEPAD_ROUTE, LEADERBOARDS_ROUTE } from "../common/constants/routes";
+import { AppRoutes } from "../common/constants/routes";
 
 class PlayerProfile extends React.Component {
   constructor(props) {
@@ -137,7 +137,7 @@ class PlayerProfile extends React.Component {
         </div>
         <div className="w-100 text-right mt-4">
           <h5>
-            <Link to={GAMEPAD_ROUTE}>
+            <Link to={AppRoutes.gamepad}>
               To Game Pad <FontAwesomeIcon icon={faArrowCircleRight} />
             </Link>
           </h5>
@@ -153,7 +153,7 @@ class PlayerProfile extends React.Component {
         </div>
         <div className="w-100 text-right mt-3">
           <h5>
-            <Link to={LEADERBOARDS_ROUTE}>
+            <Link to={AppRoutes.leaderboardsPage}>
               To Leaderboards <FontAwesomeIcon icon={faArrowCircleRight} />
             </Link>
           </h5>

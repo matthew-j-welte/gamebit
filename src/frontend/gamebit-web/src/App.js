@@ -6,13 +6,7 @@ import Gamepad from "./+gamepad/Gamepad";
 import GameDetails from "./+game-details/GameDetails";
 import LandingPage from "./+landing/LandingPage";
 import LeaderboardsPage from "./+leaderboards/LeaderboardsPage";
-import {
-  HOME_ROUTE,
-  GAMEPAD_ROUTE,
-  GAME_DETAILS_ROUTE,
-  LEADERBOARDS_ROUTE,
-  LANDING_ROUTE,
-} from "./common/constants/routes";
+import { AppRoutes } from "./common/constants/routes";
 import Navbar from "./common/components/navbar/Navbar";
 
 function App() {
@@ -20,11 +14,19 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path={HOME_ROUTE} exact element={<Homepage />} />
-        <Route path={GAMEPAD_ROUTE} exact element={<Gamepad />} />
-        <Route path={GAME_DETAILS_ROUTE} exact element={<GameDetails />} />
-        <Route path={LEADERBOARDS_ROUTE} exact element={<LeaderboardsPage />} />
-        <Route path={LANDING_ROUTE} exact element={<LandingPage />} />
+        <Route path={AppRoutes.home} exact element={<Homepage />} />
+        <Route path={AppRoutes.gamepad} exact element={<Gamepad />} />
+        <Route
+          path={AppRoutes.gameDetailsPage}
+          exact
+          element={<GameDetails />}
+        />
+        <Route
+          path={AppRoutes.leaderboardsPage}
+          exact
+          element={<LeaderboardsPage />}
+        />
+        <Route path={AppRoutes.landingPage} exact element={<LandingPage />} />
       </Routes>
     </div>
   );

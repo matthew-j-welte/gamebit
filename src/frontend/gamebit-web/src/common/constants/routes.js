@@ -1,5 +1,9 @@
-export const HOME_ROUTE = "/home";
-export const GAMEPAD_ROUTE = "/gamepad";
-export const GAME_DETAILS_ROUTE = "/games/:gameId";
-export const LEADERBOARDS_ROUTE = "/leaderboards";
-export const LANDING_ROUTE = "/";
+export const AppRoutes = {
+  home: "/home",
+  gamepad: "/gamepad",
+  gameDetailsPage: "/games/:gameId",
+  leaderboardsPage: "/leaderboards",
+  settings: "/settings",
+  logOut: "/log-out",
+  landingPage: "/",
+};

@@ -16,6 +16,7 @@
   height: 40px;
   background-color: $navbarBackground;
   color: $navbarFontColor;
+  // overflow: hidden;
 }
 
 .Logo {
@@ -57,7 +58,7 @@
   }
 
   span {
-    color: white;
+    color: $navbarFontColor;
   }
 }
 
@@ -89,32 +90,42 @@
   padding-top: 8px;
 }
 
-.DropdownNavItem {
+.PlayerNavDropdown {
+  float: right;
+  margin-right: 14px;
+  text-align: right;
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+
+  // background-color: $navbarBackground;
   opacity: 0;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.DropdownNavItem {
+  padding: 6px 10px 6px 48px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background-color: $navbarBackground;
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
+  transition: all 0.2s ease-in-out;
 
   a {
     color: $navbarIconColor;
   }
 
   span {
-    color: white;
+    color: $navbarFontColor;
   }
-}
-
-.PlayerNavDropdown {
-  float: right;
-  height: 0px;
-  width: 160px;
-  background-color: $navbarBackground;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
 }
 
 .PlayerNavDropdownActive {
   opacity: 100%;
-  height: 220px;
-  // .DropdownNavItem {
-  //   opacity: 100%;
-  // }
+  height: auto;
+}
+
+.DropdownNavItem:hover {
+  box-shadow: $navbarIconColor 0px 11px 21px -9px;
+  cursor: pointer;
 }

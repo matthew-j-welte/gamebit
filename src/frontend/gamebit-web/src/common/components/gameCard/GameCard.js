@@ -10,7 +10,7 @@ import {
   faPlay,
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
-import { GAME_DETAILS_ROUTE } from "../../constants/routes";
+import { AppRoutes } from "../../constants/routes";
 
 const imgMap = {
   "sample-mountain-game.png": mountainGameImg,
@@ -21,7 +21,8 @@ const imgMap = {
 function GameCard({ gameCard }) {
   const navigate = useNavigate();
   const handleOnClick = useCallback(
-    () => navigate(GAME_DETAILS_ROUTE.replace(":gameId", gameCard.gameId)),
+    () =>
+      navigate(AppRoutes.gameDetailsPage.replace(":gameId", gameCard.gameId)),
     [navigate, gameCard.gameId]
   );
 
