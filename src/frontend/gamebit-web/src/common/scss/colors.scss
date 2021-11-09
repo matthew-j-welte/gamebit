@@ -8,11 +8,11 @@ $bodyHeaderColorTransparent3: rgba(115, 82, 204, 0.1);
 $bodyNavArrowColor: rgb(51, 53, 58);
 
 $jumbotronBackground: rgb(193, 198, 223);
-$jumbotronHeaderColor: rgb(250, 175, 0);
-$jumbotronHeaderColorTransparent1: rgba(250, 175, 0, 0.5);
-$jumbotronHeaderColorTransparent2: rgba(250, 175, 0, 0.25);
-$jumbotronHeaderColorTransparent3: rgba(250, 175, 0, 0.1);
-$jumbotronSubHeaderColor: rgb(250, 175, 0);
+$jumbotronHeaderColor: rgb(43, 145, 212);
+$jumbotronHeaderColorTransparent1: rgba(43, 145, 212, 0.5);
+$jumbotronHeaderColorTransparent2: rgba(43, 145, 212, 0.25);
+$jumbotronHeaderColorTransparent3: rgba(43, 145, 212, 0.1);
+$jumbotronSubHeaderColor: rgb(29, 145, 223);
 
 $cardBackground: rgb(202, 205, 224);
 $pillBackground: rgb(235, 235, 235);
@@ -24,3 +24,8 @@ $anchorTagColor: rgb(115, 82, 204);
 $anchorTagColorHover: rgb(134, 96, 238);
 
 $tableHeaderBackground: $bodyHeaderColorTransparent3;
+
+$navbarBackground: $sectionHeader;
+$navbarFontColor: rgb(231, 231, 231);
+$navbarIconColor: $jumbotronHeaderColor;
+$navbarIconColorHover: $jumbotronHeaderColorTransparent1;

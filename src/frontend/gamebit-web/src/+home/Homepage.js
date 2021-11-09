@@ -51,13 +51,15 @@ class PlayerProfile extends React.Component {
     const jumbotronSection = (
       <div className="ProfileJumbotron container-fluid p-4 pt-3">
         <div className="d-flex align-items-center">
-          <img
-            className="ProfileImage"
-            src={defaultProfile}
-            alt={defaultProfile}
-          />
+          <div>
+            <img
+              className="ProfileImage"
+              src={defaultProfile}
+              alt={defaultProfile}
+            />
+          </div>
           <div className="ProfileImageOverlay text-center">
-            <div className="py-2 mt-4">
+            <div className="py-2 mt-2">
               <strong>EDIT</strong>
             </div>
             <div className="py-2">

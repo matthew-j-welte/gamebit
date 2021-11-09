@@ -82,6 +82,26 @@ Sign Up/Login screen for those who arent already logged in
 
 ## Notification Details (Modal)
 
+## Navbar
+
+Links:
+
+- Notifications (icon) dropdown
+- Messages (icon) dropdown
+- Gamepad (icon)
+- Leaderboards (icon)
+- Logged in User Photo
+- Username + Dropdown icon with:
+  - (icon) Edit Profile
+  - (icon) Edit Player Card
+  - (icon) Log Out
+  - (icon) Settings
+
+**Big Screen**:
+Left: - Notifications (icon) dropdown - Messages (icon) dropdown
+Center: - Home (gamebit logo/header) -> /home
+Right:
+
 ---
 
 # Frontend URLs

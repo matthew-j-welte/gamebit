@@ -93,7 +93,7 @@ Should be able to use points in the frontend itself and in games
 ---
 
 Feel like I should move away from designing this like the "main" page will be the gamepad
-Think about it, how often do you spend time searching for new games (especially with how log the game count will be) compared to the time spent playing the games, viewing your stats, claiming rewards/upgrades etc.
+Think about it, how often do you spend time searching for new games (especially with how low the game count will be) compared to the time spent playing the games, viewing your stats, claiming rewards/upgrades etc.
 
 Turn the bottom bar of the Profile jumbotron into a sticky navbar
 

@@ -5,6 +5,7 @@ a {
   color: $anchorTagColor;
   font-family: $bodyFont;
   text-decoration: unset;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
