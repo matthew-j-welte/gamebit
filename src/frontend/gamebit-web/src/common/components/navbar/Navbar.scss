@@ -8,6 +8,7 @@
   top: 0px;
   left: 0px;
   margin: 0px;
+  z-index: 1000;
 }
 
 .Navbar {
@@ -21,7 +22,7 @@
   letter-spacing: 8px;
   font-size: 30px;
   color: whitesmoke;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.253), 1px 1px 3px rgb(0, 0, 0.253);
+  text-shadow: 1px 1px 4px $navbarIconColor, 1px 1px 3px $navbarIconColor;
   transition: all 0.2s ease-in-out;
 }
 
@@ -29,18 +30,17 @@
   letter-spacing: 10px;
 }
 
-.NavSection {
-  div {
-    height: 40px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 8px;
-    transition: all 0.2s ease-in-out;
-  }
+.NavItem {
+  height: 40px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 8px;
+  transition: all 0.1s ease-in-out;
+}
 
-  div:hover {
-    border-bottom: 4px solid $navbarIconColor;
-  }
+.NavItem:hover {
+  border-bottom: 4px solid $navbarIconColor;
+  cursor: pointer;
 }
 
 .NavProfileImage {
@@ -78,9 +78,43 @@
 .ProfileNavSection {
   width: 42%;
 
-  div {
+  .ProfileNavItem {
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 8px;
   }
+}
+
+.NavItemIcon {
+  padding-top: 8px;
+}
+
+.DropdownNavItem {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+
+  a {
+    color: $navbarIconColor;
+  }
+
+  span {
+    color: white;
+  }
+}
+
+.PlayerNavDropdown {
+  float: right;
+  height: 0px;
+  width: 160px;
+  background-color: $navbarBackground;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.PlayerNavDropdownActive {
+  opacity: 100%;
+  height: 220px;
+  // .DropdownNavItem {
+  //   opacity: 100%;
+  // }
 }
