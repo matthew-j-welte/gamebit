@@ -75,7 +75,7 @@ function NotificationsCarousel() {
         <h4>{unseenCount}</h4>
       </div>
       <div className="NotificationContent">
-        <h5 className="my-1">{notification.title}</h5>
+        <h5 className="my-0">{notification.title}</h5>
         <hr className="LightGradientHR"></hr>
         <p>
           <small>

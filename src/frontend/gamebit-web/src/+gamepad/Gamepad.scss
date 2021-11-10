@@ -1,3 +1,6 @@
+@import "../common/scss/colors.scss";
+@import "../common/scss/fonts.scss";
+
 .GamepadHeader {
   text-align: center;
   color: whitesmoke;
@@ -14,5 +17,40 @@
   h3 {
     color: whitesmoke;
     font-style: italic;
+  }
+}
+
+.GamepadJumbotronBackground {
+  padding-top: 32px;
+  width: 100%;
+  background-color: $jumbotronBackground;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.JumbotronBackgroundImage {
+  height: 480px;
+  background-size: cover;
+}
+
+.GamepadJumbotron {
+  max-width: 1920px;
+  font-family: $jumbotronHeader;
+
+  h1 {
+    color: $jumbotronHeaderColor;
+    font-family: $jumbotronHeader;
+    font-size: 56px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.253), 1px 1px 2px rgb(0, 0, 0.253);
+  }
+
+  h6 {
+    color: rgb(22, 22, 22);
+  }
+
+  h2 {
+    color: $jumbotronSubHeaderColor;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.253), 1px 1px 2px rgb(0, 0, 0.253);
+    padding-top: 4px;
   }
 }

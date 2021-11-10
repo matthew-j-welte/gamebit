@@ -2,6 +2,15 @@ import React from "react";
 import "./Gamepad.scss";
 import GameService from "../common/services/GameService";
 import GameCard from "../common/components/gameCard/GameCard";
+import mountainGameImg from "../assets/sample-mountain-game.png";
+import spaceGameImg from "../assets/sample-space-game.jpg";
+import retroGameImg from "../assets/sample-retro-game.jpg";
+
+const imgMap = {
+  "sample-mountain-game.png": mountainGameImg,
+  "sample-space-game.jpg": spaceGameImg,
+  "sample-retro-game.jpg": retroGameImg,
+};
 
 class Gamepad extends React.Component {
   constructor(props) {
@@ -17,66 +26,60 @@ class Gamepad extends React.Component {
   componentDidMount() {
     const allCards = [];
     const continuePlayingCards = [];
-    const newAndPopularCards = [];
 
     // TODO: Make this async
     GameService.getGameCards().forEach((gameCard) => {
       allCards.push(gameCard);
-      if (gameCard.plays % 3 === 2) {
-        continuePlayingCards.push(gameCard);
-      } else if (gameCard.rating >= 4.1) {
-        newAndPopularCards.push(gameCard);
-      }
     });
 
     this.setState({
       ...this.state,
+      activeGamePreview: null,
       allCards: allCards,
       continuePlayingCards: continuePlayingCards,
-      newAndPopularCards: newAndPopularCards,
     });
   }
 
   render() {
-    const cardMapper = (x, index) => (
-      <div key={index + "-game-card"} className="col-4">
-        <GameCard gameCard={x} index={index} />
+    const jumbotronSection = this.state.allCards ? (
+      <div className="GamepadJumbotronBackground">
+        <div className="GamepadJumbotron container-fluid p-4 pt-3">
+          <div className="d-flex">
+            <div className="ProgrammingLanguagePill">{}</div>
+          </div>
+        </div>
       </div>
+    ) : (
+      <></>
     );
+
     const noCardsToShowComponent = (
       <div className="NoCardsSlide">
         <h3>No Games to Show :(</h3>
       </div>
     );
 
-    const allCards = [];
-    this.state.allCards?.forEach((x, index) => {
-      allCards.push(cardMapper(x, index));
-    });
+    const featuredGames = this.state.allCards?.map((card) => (
+      <div key={card.gameId + "-game-card"} className="col-4 mx-0 px-0">
+        <GameCard gameCard={card} isBannerCard={true} />
+      </div>
+    ));
 
-    const continuePlayingCards = [];
-    this.state.continuePlayingCards?.forEach((x, index) => {
-      continuePlayingCards.push(cardMapper(x, index));
-    });
-
-    const newAndPopularCards = [];
-    this.state.newAndPopularCards?.forEach((x, index) => {
-      newAndPopularCards.push(cardMapper(x, index));
-    });
+    const allGames = this.state.allCards?.map((card) => (
+      <div key={card.gameId + "-game-card"} className="col-4">
+        <GameCard gameCard={card} />
+      </div>
+    ));
 
     return (
-      <div className="Gamepad container">
-        <h1 className="GamepadHeader pb-5">GAMEBIT</h1>
-        <h2 className="SectionHeader">Continue Playing</h2>
-        <div className="row">
-          {continuePlayingCards ?? noCardsToShowComponent}
+      <div>
+        {jumbotronSection}
+        <div className="Gamepad container">
+          <h2 className="AppSectionHeader">Featured Games</h2>
+          <div className="row">{featuredGames ?? noCardsToShowComponent}</div>
+          <h2 className="AppSectionHeader">Browse All Games</h2>
+          <div className="row">{allGames ?? noCardsToShowComponent}</div>
         </div>
-        <h2 className="SectionHeader">New & Popular Games</h2>
-        <div className="row">
-          {newAndPopularCards ?? noCardsToShowComponent}
-        </div>
-        <h2 className="SectionHeader">Browse All Games</h2>
-        <div className="row">{allCards ?? noCardsToShowComponent}</div>
       </div>
     );
   }

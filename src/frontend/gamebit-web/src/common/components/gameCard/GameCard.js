@@ -18,42 +18,61 @@ const imgMap = {
   "sample-retro-game.jpg": retroGameImg,
 };
 
-function GameCard({ gameCard }) {
+function GameCard({ gameCard, showPlayerStats = false, isBannerCard = false }) {
   const navigate = useNavigate();
+
   const handleOnClick = useCallback(
     () =>
       navigate(AppRoutes.gameDetailsPage.replace(":gameId", gameCard.gameId)),
     [navigate, gameCard.gameId]
   );
 
-  return (
-    <div className="GameCardContainer">
-      <div
-        className="GameCard text-center"
-        style={{
-          backgroundImage: `url(${imgMap[gameCard.gameImageUrl]})`,
-        }}
-      >
-        <h5 className="CardHeader">{gameCard.name}</h5>
+  const gameStatsBar = (
+    <div className="GameCardBottomBar d-flex justify-content-between align-items-center">
+      <div>
+        <FontAwesomeIcon icon={faPlay} />
+        <em className="pl-2">{gameCard.playerPlays}</em>
       </div>
+      <div>
+        <FontAwesomeIcon icon={faChartLine} />
+        <em className="pl-2">{gameCard.playerRanking}</em>
+      </div>
+      <div>
+        <FontAwesomeIcon icon={faTrophy} />
+        <em className="pl-2">
+          {gameCard.tokensEarned} / {gameCard.totalGameTokens}
+        </em>
+      </div>
+    </div>
+  );
 
-      <div className="GameCardBottomBar d-flex justify-content-between align-items-center">
-        <div>
-          <FontAwesomeIcon icon={faPlay} />
-          <em className="pl-2">{gameCard.playerPlays}</em>
+  return (
+    <div
+      className={`Container ${
+        isBannerCard ? "BannerCardContainer" : "GameCardContainer"
+      }`}
+    >
+      <div
+        className={`ContentContainer ${
+          isBannerCard ? "BannerContentContainer" : "CardContentContainer"
+        }`}
+      >
+        <div
+          className={`Game ${isBannerCard ? "BannerGameCard" : "GameCard"}`}
+          style={{
+            backgroundImage: `url(${imgMap[gameCard.gameImageUrl]})`,
+          }}
+        >
+          <h5 className="CardHeader">{gameCard.name}</h5>
         </div>
-        <div>
-          <FontAwesomeIcon icon={faChartLine} />
-          <em className="pl-2">{gameCard.playerRanking}</em>
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faTrophy} />
-          <em className="pl-2">
-            {gameCard.tokensEarned} / {gameCard.totalGameTokens}
-          </em>
-        </div>
+        <div
+          className={`Overlay ${
+            isBannerCard ? "BannerGameCardOverlay" : "GameCardOverlay"
+          }`}
+          onClick={handleOnClick}
+        ></div>
       </div>
-      <div className="GameCardOverlay w-100" onClick={handleOnClick}></div>
+      {showPlayerStats ? gameStatsBar : <></>}
     </div>
   );
 }

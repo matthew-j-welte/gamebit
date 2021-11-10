@@ -12,3 +12,10 @@ a:hover {
   color: $anchorTagColorHover;
   text-decoration: unset;
 }
+
+.AppSectionHeader {
+  font-size: 26px;
+  color: $sectionHeader;
+  text-shadow: 1px 1px 1px $navbarIconColor, 1px 1px 1px $navbarIconColor;
+  letter-spacing: 2px;
+}

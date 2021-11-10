@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ContextService from "../../services/ContextService";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AppRoutes } from "../../../common/constants/routes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,31 +25,38 @@ function Navbar() {
     setLoggedInUser(ContextService.getLoggedInPlayer());
   }, []);
 
+  const isActiveNav = (isActive) =>
+    `NavItem ${isActive ? "ActiveNavLink" : ""}`;
+
   return (
     <div>
       <div className="NavbarBackground">
         <div className="Navbar container-fluid">
           <div className="d-flex">
-            <div className="NavSection LinkNavSection d-flex justify-content-start">
-              <div className="NavItem">
-                <Link to={AppRoutes.leaderboardsPage}>
-                  <FontAwesomeIcon icon={faChartBar} />{" "}
-                  <span className="pl-1">Leaderboards</span>
-                </Link>
-              </div>
-              <div className="NavItem">
-                <Link to={AppRoutes.gamepad}>
-                  <FontAwesomeIcon icon={faGamepad} />{" "}
-                  <span className="pl-1">Gamepad</span>
-                </Link>
-              </div>
-              <div className="NavItem">
-                <Link to={AppRoutes.home}>
-                  <FontAwesomeIcon icon={faHome} />{" "}
-                  <span className="pl-1">Home</span>
-                </Link>
-              </div>
-            </div>
+            <nav className="NavSection LinkNavSection d-flex justify-content-start">
+              <NavLink
+                className={({ isActive }) => isActiveNav(isActive)}
+                to={AppRoutes.leaderboardsPage}
+              >
+                <FontAwesomeIcon icon={faChartBar} />{" "}
+                <span className="pl-1">Leaderboards</span>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => isActiveNav(isActive)}
+                to={AppRoutes.gamepad}
+              >
+                <FontAwesomeIcon icon={faGamepad} />{" "}
+                <span className="pl-1">Gamepad</span>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) => isActiveNav(isActive)}
+                to={AppRoutes.home}
+              >
+                <FontAwesomeIcon icon={faHome} />{" "}
+                <span className="pl-1">Home</span>
+              </NavLink>
+            </nav>
             <div className="NavSection LogoNavSection text-center">
               <h3 className="Logo">
                 <Link to={AppRoutes.landingPage} />

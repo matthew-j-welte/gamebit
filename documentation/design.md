@@ -22,6 +22,24 @@ Sign Up/Login screen for those who arent already logged in
 
 ## Gamepage (name pending)
 
+Flow:
+
+- Page loads
+- A list of featured games are being previewed (gifs/videos) in a carousel of sorts
+- When the user hovers over a game it quickly (0.1/0.2s transition) takes over the featured game carousel screen
+- The state of the carousel is paused and stored when the user hovers over the game
+- When the user unhovers from a game the game should keep playing for around 1 second
+- The featured games should then pick up where they left off
+- Lets say someone hovers over a game then immediately hovers over another one, in that case the second game should start playing without waiting the 1 second
+
+Technical Flow:
+
+- Have an observable that waits the one second and then sets the featured games back to active
+- When a user hovers over a game cancel/delete the previous observable (if it exists)
+- Set that game to active
+- When the user unhovers
+- Overwrite the previously deleted observable with a new one that will also set it back to featured games after 1 second
+
 - Jumbotron that plays game previews
   - Starts playing the featured games by default on page load
   - Shows the game being hovered over otherwise
@@ -32,6 +50,10 @@ Sign Up/Login screen for those who arent already logged in
 - Browse all Games
   - Sort By
   - Filter
+    - Language Filter
+    - Difficulty
+    - Year Created
+    - Reviews (1/2/3/4/5 stars)
 
 ## Game Details
 

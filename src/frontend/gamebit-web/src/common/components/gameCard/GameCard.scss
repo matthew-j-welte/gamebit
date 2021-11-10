@@ -11,21 +11,55 @@
   -webkit-text-stroke-color: rgb(26, 26, 32);
 }
 
+.Container {
+}
+
+.BannerCardContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  height: 180px;
+  width: 100%;
+}
+
 .GameCardContainer {
   padding-left: 8px;
   padding-right: 8px;
   height: 200px;
+  width: 360px;
+}
+
+.ContentContainer {
+  position: relative;
+}
+
+.BannerContentContainer {
+  height: 152px;
+  width: 100%;
+}
+
+.CardContentContainer {
+  height: 172px;
+  width: 360px;
+}
+
+.Game {
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  text-align: center;
+  background-size: cover;
 }
 
 .GameCard {
   padding-top: 60px;
   border-radius: 6px;
-  width: 360px;
-  height: 172px;
-  color: whitesmoke;
-  text-align: center;
-  background-size: cover;
   box-shadow: $deepBoxShadow;
+}
+
+.BannerGameCard {
+  padding-top: 52px;
+  border-radius: 0px;
 }
 
 .GameCardBottomBar {
@@ -42,13 +76,29 @@
   }
 }
 
-.GameCardOverlay {
+.Overlay {
   opacity: 0;
-  position: relative;
-  top: -220px;
-  height: 172px;
-  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.BannerGameCardOverlay {
+  border-radius: 0px;
+  border: 6px solid $bodyHeaderColor;
+  transition: all 0.3s ease-in-out;
+}
+
+.BannerGameCardOverlay:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.GameCardOverlay {
+  border-radius: 6px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   transition: box-shadow, opacity 0.2s ease-in-out;
 }

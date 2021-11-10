@@ -2,58 +2,151 @@ const GameService = {
   getGameCards: function () {
     return [
       {
-        name: "Sample Game 1",
-        plays: 215,
-        image: "XXXXXXXX",
-        rating: 4.1,
-        difficulty: 85,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: 392,
+        gameId: "1",
+        name: "The Retro Game",
+        gameImageUrl: "sample-retro-game.jpg",
+        totalGameTokens: 9,
+        primaryColor: "#ff8400",
+        secondaryColor: "#e33d00",
+        difficulty: "Hard",
+        creator: {
+          playerId: 1,
+          playerName: "matt-welte-dev",
+        },
+        dateCreated: "November 9, 2021",
+        programmingLanguages: [
+          {
+            languageId: 1,
+            name: "Python",
+          },
+          {
+            languageId: 2,
+            name: "Go",
+          },
+          {
+            languageId: 3,
+            name: "Javascript",
+          },
+          {
+            languageId: 4,
+            name: "C++",
+          },
+        ],
+        associatedSkills: [
+          {
+            skillId: 1,
+            name: "Algorithms",
+          },
+          {
+            skillId: 2,
+            name: "Parallel Processing",
+          },
+          {
+            skillId: 3,
+            name: "Architecture",
+          },
+        ],
+        previewVideoUrl: "retro-game-preview.gif",
       },
       {
-        name: "Sample Game 2",
-        plays: 602,
-        image: "XXXXXXXX",
-        rating: 4.7,
-        difficulty: 32,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: null,
+        gameId: "3",
+        name: "Purple Game",
+        gameImageUrl: "sample-mountain-game.png",
+        playerPlays: 105,
+        playerRanking: 297,
+        tokensEarned: 1,
+        totalGameTokens: 7,
+        primaryColor: "#219101",
+        secondaryColor: "#b969ff",
+        difficulty: "Hard",
+        creator: {
+          playerId: 1,
+          playerName: "matt-welte-dev",
+        },
+        dateCreated: "November 9, 2021",
+        programmingLanguages: [
+          {
+            languageId: 1,
+            name: "Python",
+          },
+          {
+            languageId: 2,
+            name: "Go",
+          },
+          {
+            languageId: 3,
+            name: "Javascript",
+          },
+          {
+            languageId: 4,
+            name: "C++",
+          },
+        ],
+        associatedSkills: [
+          {
+            skillId: 1,
+            name: "Algorithms",
+          },
+          {
+            skillId: 2,
+            name: "Parallel Processing",
+          },
+          {
+            skillId: 3,
+            name: "Architecture",
+          },
+        ],
+        previewVideoUrl: "purple-game-preview.gif",
       },
       {
-        name: "Sample Game 3",
-        plays: 107,
-        image: "XXXXXXXX",
-        rating: 4.3,
-        difficulty: 56,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: null,
-      },
-      {
-        name: "Sample Game 4",
-        plays: 987,
-        image: "XXXXXXXX",
-        rating: 4.9,
-        difficulty: 77,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: 1596,
-      },
-      {
-        name: "Sample Game 5",
-        plays: 43,
-        image: "XXXXXXXX",
-        rating: 3.9,
-        difficulty: 91,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: null,
-      },
-      {
-        name: "Sample Game 6",
-        plays: 222,
-        image: "XXXXXXXX",
-        rating: 4.7,
-        difficulty: 24,
-        description: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-        playerRanking: null,
+        gameId: "5",
+        name: "Space Game",
+        gameImageUrl: "sample-space-game.jpg",
+        playerPlays: 5,
+        playerRanking: 8297,
+        tokensEarned: 0,
+        totalGameTokens: 5,
+        primaryColor: "#6a00ff",
+        secondaryColor: "#3f00d4",
+        difficulty: "Hard",
+        creator: {
+          playerId: 1,
+          playerName: "matt-welte-dev",
+        },
+        dateCreated: "November 9, 2021",
+        programmingLanguages: [
+          {
+            languageId: 1,
+            name: "Python",
+          },
+          {
+            languageId: 2,
+            name: "Go",
+          },
+          {
+            languageId: 3,
+            name: "Javascript",
+          },
+          {
+            languageId: 4,
+            name: "C++",
+          },
+        ],
+        associatedSkills: [
+          {
+            skillId: 1,
+            name: "Algorithms",
+          },
+          {
+            skillId: 2,
+            name: "Parallel Processing",
+          },
+          {
+            skillId: 3,
+            name: "Architecture",
+          },
+        ],
+        previewVideoUrl: "space-game-preview.gif",
       },
     ];
   },

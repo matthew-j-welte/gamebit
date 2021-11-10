@@ -43,7 +43,7 @@ class PlayerProfile extends React.Component {
             name: x.gameName,
             ...x,
           }}
-          index={index}
+          showPlayerStats={true}
         />
       </div>
     ));
@@ -51,22 +51,22 @@ class PlayerProfile extends React.Component {
     const jumbotronSection = (
       <div className="ProfileJumbotron container-fluid p-4 pt-3">
         <div className="d-flex align-items-center">
-          <div>
+          <div className="ProfileImageContainer">
             <img
               className="ProfileImage"
               src={defaultProfile}
               alt={defaultProfile}
             />
-          </div>
-          <div className="ProfileImageOverlay text-center">
-            <div className="py-2 mt-2">
-              <strong>EDIT</strong>
-            </div>
-            <div className="py-2">
-              <a href="/">Profile</a>
-            </div>
-            <div className="py-2">
-              <a href="/">Player Card</a>
+            <div className="ProfileImageOverlay text-center">
+              <div className="py-2 mt-2">
+                <strong>EDIT</strong>
+              </div>
+              <div className="py-2">
+                <a href="/">Profile</a>
+              </div>
+              <div className="py-2">
+                <a href="/">Player Card</a>
+              </div>
             </div>
           </div>
           <div className="pl-5">
@@ -131,7 +131,7 @@ class PlayerProfile extends React.Component {
 
     const topGameSection = (
       <div className="TopGamesSection pt-2 pb-4 mt-5">
-        <h2>Continue Playing</h2>
+        <h2 className="AppSectionHeader">Continue Playing</h2>
         <div className="d-flex justify-content-between pt-2">
           {topGameCards}
         </div>
@@ -146,8 +146,8 @@ class PlayerProfile extends React.Component {
     );
 
     const leaderboardSection = (
-      <div className="mt-5">
-        <h2>Leaderboard Preview</h2>
+      <div className="mt-4">
+        <h2 className="AppSectionHeader">Global Ranking</h2>
         <div className="LeaderboardSection mt-3">
           <LeaderboardPreview rankings={this.state.profile.playerRankings} />
         </div>
