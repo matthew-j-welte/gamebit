@@ -11,9 +11,6 @@
   -webkit-text-stroke-color: rgb(26, 26, 32);
 }
 
-.Container {
-}
-
 .BannerCardContainer {
   padding-left: 0px;
   padding-right: 0px;
@@ -89,7 +86,7 @@
 .BannerGameCardOverlay {
   border-radius: 0px;
   border: 6px solid $bodyHeaderColor;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .BannerGameCardOverlay:hover {

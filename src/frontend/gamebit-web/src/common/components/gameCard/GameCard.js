@@ -18,10 +18,14 @@ const imgMap = {
   "sample-retro-game.jpg": retroGameImg,
 };
 
-function GameCard({ gameCard, showPlayerStats = false, isBannerCard = false }) {
+function GameCard({
+  gameCard,
+  showPlayerStats = false,
+  isBannerCard = false,
+  handleClick = null,
+}) {
   const navigate = useNavigate();
-
-  const handleOnClick = useCallback(
+  const handleOnClickReroute = useCallback(
     () =>
       navigate(AppRoutes.gameDetailsPage.replace(":gameId", gameCard.gameId)),
     [navigate, gameCard.gameId]
@@ -69,7 +73,11 @@ function GameCard({ gameCard, showPlayerStats = false, isBannerCard = false }) {
           className={`Overlay ${
             isBannerCard ? "BannerGameCardOverlay" : "GameCardOverlay"
           }`}
-          onClick={handleOnClick}
+          onClick={
+            handleClick === null
+              ? handleOnClickReroute
+              : () => handleClick(gameCard)
+          }
         ></div>
       </div>
       {showPlayerStats ? gameStatsBar : <></>}
