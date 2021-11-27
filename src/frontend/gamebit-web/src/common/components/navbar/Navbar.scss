@@ -47,8 +47,10 @@
 
 .NavProfileImage {
   border-radius: 100%;
-  width: 42px;
-  height: 42px;
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  border: 1px solid black;
 }
 
 .LinkNavSection {
@@ -133,4 +135,8 @@
 
 .ActiveNavLink {
   border-bottom: 4px solid $navbarIconColor;
+}
+
+.PlayerNavItem {
+  background-color: $navbarBackgroundLight1;
 }

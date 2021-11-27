@@ -124,6 +124,13 @@ Left: - Notifications (icon) dropdown - Messages (icon) dropdown
 Center: - Home (gamebit logo/header) -> /home
 Right:
 
+## Resources Page
+
+Where we can give useful links/resources for doing things such as:
+
+- Learning a particular language
+- ...
+
 ---
 
 # Frontend URLs

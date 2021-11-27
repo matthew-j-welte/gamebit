@@ -8,7 +8,6 @@ import {
   faAddressCard,
   faBell,
   faChartBar,
-  faChevronDown,
   faCogs,
   faEnvelope,
   faGamepad,
@@ -16,6 +15,8 @@ import {
   faSignOutAlt,
   faUsersCog,
 } from "@fortawesome/free-solid-svg-icons";
+
+import profileImg from "../../../assets/default-profile-img.png";
 
 function Navbar() {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -75,13 +76,17 @@ function Navbar() {
               <div
                 role="button"
                 onClick={() => setDropdownVisible(!dropdownVisible)}
-                className="NavItem PlayerNavItem d-flex pt-0"
+                className="NavItem PlayerNavItem d-flex pt-0 px-2"
               >
                 <span className="NavItemIcon px-1">
                   {loggedInUser?.username}
                 </span>
-                <span className="NavItemIcon px-1">
-                  <FontAwesomeIcon icon={faChevronDown} />
+                <span className="pl-2">
+                  <img
+                    className="NavProfileImage"
+                    src={profileImg}
+                    alt={"ME"}
+                  />
                 </span>
               </div>
             </div>
